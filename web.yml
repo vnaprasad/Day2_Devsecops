@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: prdep1
+  name: prdep1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: prdep1
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: prdep1
+    spec:
+      containers:
+      - image: vnaprasad/oracle12c:oracle12c
+        name: oracle12c
+        resources: {}
+status: {}
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: pr1
+  name: pr1
+spec:
+  ports:
+  - name: 1233-80
+    port: 1233
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: prdep1
+  type: NodePort
+status:
+  loadBalancer: {}
