@@ -1,9 +1,9 @@
 version: '3.8'
 services:
- ashuhtmlapp:
-  image: httpd:ashuv002
+ Prasad17:
+  image: httpd:Prasad17
   build: .
-  container_name: ashuxc1
+  container_name: Prasad1723
   restart: always
   ports:
    - "8765:80"
