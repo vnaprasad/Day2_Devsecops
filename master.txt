@@ -1,0 +1,12 @@
+git pull	==> changes made in reporsoratory updated in server
+git status
+git  branch 
+git  checkout  -b   test 	==> creating a branch
+git branch 
+git  checkout  -b   dev
+git branch 
+ls
+history 
+git branch 
+git  branch 
+git  checkout  master	==> Changing branch
