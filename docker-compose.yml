@@ -1,9 +1,9 @@
 version: '3.8'
 services:
- ashuhtmlapp:
-  image: httpd:ashuv002
-  container_name: ashuxc1
+ Prasad17:
+  image: httpd:Prasad17
+  build: .
+  container_name: Prasad1723
   restart: always
   ports:
-   - "8765:80"
-  mem_limit: 300m    #  incase of application compromise it can't use resource more than 300m
+   - "2323:80"
