@@ -27,8 +27,8 @@ kind: Service
 metadata:
   creationTimestamp: null
   labels:
-    app: pr1
-  name: pr1
+    app: prdep1
+  name: prdep1
 spec:
   ports:
   - name: 1233-80
