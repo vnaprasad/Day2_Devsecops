@@ -6,5 +6,5 @@ services:
   container_name: Prasad2317
   restart: always
   ports:
-   - "8765:80"
+   - "2323:80"
   
