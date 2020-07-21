@@ -2,6 +2,7 @@ version: '3.8'
 services:
  ashuhtmlapp:
   image: httpd:ashuv002
+  build .
   container_name: ashuxc1
   restart: always
   ports:
