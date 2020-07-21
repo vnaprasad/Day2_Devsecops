@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: prasadwebapp17
+  name: prasadwebapp17   # Name of deployment that is unique
+spec:
+  replicas: 1      # need only one POD
+  selector:
+    matchLabels:
+      app: prasadwebapp17
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:           # This a tag on PODs
+        app: prasad17
+    spec:
+      containers:
+      - image: vnaprasad/oracle12c:latest       # Name of image on Docker Hub
+        name: oracle12c                         # Name of Container
+        imagePullPolicy: Always                 # Try to pull image every time is build is success
+        resources: {}
+status: {}
+
+----
+
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: prasadwebapp17
+  name: prasadwebapp17
+spec:
+  ports:
+  - name: 1717-80
+    port: 1717
+    protocol: TCP
+    targetPort: 80
+  selector:                             #this will the POD with their labels
+    app: prasadwebapp17                 # Both like key and value must match to POD lables
+  type: NodePort
+status:
+  loadBalancer: {}
